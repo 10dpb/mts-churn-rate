@@ -1,0 +1,35 @@
+2026-04-02 02:31:28,450 - INFO - === Запуск обучения модели ===
+2026-04-02 02:31:28,450 - INFO - Загрузка данных из /Users/alexander/Documents/Projects/mts-churn-rate/data/processed/processed_data.csv
+2026-04-02 02:31:28,463 - INFO - Загружено 9525 записей, 27 признаков
+2026-04-02 02:31:28,464 - INFO - Доля оттока: 9.04%
+2026-04-02 02:31:28,467 - INFO - Разделение: train=7620, test=1905, отток train=9.04%, test=9.03%
+2026-04-02 02:31:28,467 - INFO - === Оптимизация гиперпараметров через Optuna ===
+2026-04-02 02:31:39,844 - INFO - Лучшие параметры: {'iterations': 400, 'depth': 4, 'learning_rate': 0.27321198747529507, 'l2_leaf_reg': 0.143079968154085, 'border_count': 202, 'bagging_temperature': 0.24204607386839389, 'random_strength': 2.7592544523748974, 'early_stopping_rounds': 38}
+2026-04-02 02:31:39,844 - INFO - Лучший ROC-AUC на валидации: 0.7213
+2026-04-02 02:31:39,844 - INFO - === Обучение финальной модели ===
+2026-04-02 02:31:41,143 - INFO - Оптимальный порог: 0.0337, значение метрики: 0.2457
+2026-04-02 02:31:41,149 - INFO - === Оценка модели ===
+2026-04-02 02:31:41,149 - INFO - ROC-AUC: 0.6981
+2026-04-02 02:31:41,149 - INFO - Порог: 0.0337
+2026-04-02 02:31:41,149 - INFO - F1-score: 0.2457, Precision: 0.1403, Recall: 0.9884
+2026-04-02 02:31:41,149 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.40      0.57      1733
+           1       0.14      0.99      0.25       172
+
+    accuracy                           0.45      1905
+   macro avg       0.57      0.69      0.41      1905
+weighted avg       0.92      0.45      0.54      1905
+
+2026-04-02 02:31:41,149 - INFO - 
+Confusion Matrix:
+[[ 691 1042]
+ [   2  170]]
+2026-04-02 02:31:41,150 - INFO - Метрики сохранены в /Users/alexander/Documents/Projects/mts-churn-rate/models/v1/metrics.json
+2026-04-02 02:31:41,159 - INFO - Тестовый датасет со скорами сохранён в /Users/alexander/Documents/Projects/mts-churn-rate/models/v1/test_with_scores.csv
+2026-04-02 02:31:41,160 - INFO - Модель сохранена в /Users/alexander/Documents/Projects/mts-churn-rate/models/v1/cbm.pkl
+2026-04-02 02:31:41,160 - INFO - Параметры сохранены в /Users/alexander/Documents/Projects/mts-churn-rate/models/v1/best_params.json
+2026-04-02 02:31:41,160 - INFO - Порог сохранён в /Users/alexander/Documents/Projects/mts-churn-rate/models/v1/threshold.json
+2026-04-02 02:31:41,160 - INFO - === Обучение завершено ===

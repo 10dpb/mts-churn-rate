@@ -1,0 +1,29 @@
+{
+    "roc_auc": 0.6981440974784955,
+    "f1_score": 0.24566473988439305,
+    "precision": 0.14026402640264027,
+    "recall": 0.9883720930232558,
+    "threshold": 0.0337265609562879,
+    "confusion_matrix": [
+        [
+            691,
+            1042
+        ],
+        [
+            2,
+            170
+        ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n           0       1.00      0.40      0.57      1733\n           1       0.14      0.99      0.25       172\n\n    accuracy                           0.45      1905\n   macro avg       0.57      0.69      0.41      1905\nweighted avg       0.92      0.45      0.54      1905\n",
+    "best_params": {
+        "iterations": 400,
+        "depth": 4,
+        "learning_rate": 0.27321198747529507,
+        "l2_leaf_reg": 0.143079968154085,
+        "border_count": 202,
+        "bagging_temperature": 0.24204607386839389,
+        "random_strength": 2.7592544523748974,
+        "early_stopping_rounds": 38
+    },
+    "training_date": "2026-04-02T02:31:41.149829"
+}
